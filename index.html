@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>药师</title>
+<style type="text/css" media="screen">
+		@media screen and (max-device-width:1280px){
+				#elements{
+				position:relative;
+				margin-top:-49%;
+				}
+				#down{
+					position:relative;
+					margin-top:-110%;
+				}
+		}
+		@media screen and (max-device-width:480px){
+				#elements{
+				position:relative;
+				margin-top:-49%;
+				}
+				#down{
+					position:relative;
+					margin-top:-115%;
+				}
+		}
+		
+		@-moz-keyframes myMove {
+		0% {padding-top:80%;}
+		100% {padding-top:81%;}
+		}
+		@-webkit-keyframes myMove {
+		0% {padding-top:80%;}
+		100% {padding-top:81%;}
+		}
+		@-o-keyframes myMove {
+		0% {padding-top:80%;}
+		100% {padding-top:81%;}
+		}
+		@keyframes myMove {
+		0% {padding-top:80%;}
+		100% {padding-top:81%;}
+		}
+		#down {
+		  text-align: center;
+		  -moz-animation:    myMove 1s linear infinite alternate; 
+		  -webkit-animation: myMove 1s linear infinite alternate;
+		  -o-animation: myMove 1s linear infinite alternate;
+		  animation: myMove 1s linear infinite alternate;
+		}
+</style>
+</head>
+<body>
+<center>
+	<img src="1.jpg" alt="background" width="100%">
+	<center>
+		<div id="elements">
+		<img src="微信.jpg" height="10%" width="20%" id="weixin" onclick="shibie()">
+		<div id="down"><canvas id="downCanvas" width="50%"></canvas><div>
+		</div>	
+	</center>
+	
+</center>
+<script src="jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="jquery.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+function drawDown() {
+        var c = document.getElementById("downCanvas"),
+            cxt = c.getContext("2d");
+        cxt.beginPath();
+        cxt.moveTo(5, 20);
+        cxt.lineTo(25, 45);
+        cxt.lineTo(45, 20);
+        cxt.lineWidth = 5;
+        cxt.strokeStyle = "gray";
+        cxt.lineCap = 'round';
+        cxt.lineJoin = "round";
+        cxt.stroke();
+		
+        cxt.moveTo(5, 5);
+        cxt.lineTo(25, 30);
+        cxt.lineTo(45, 5);
+        cxt.lineWidth = 5;
+        cxt.strokeStyle = "gray";
+        cxt.lineCap = 'round';
+        cxt.lineJoin = "round";
+        cxt.stroke();
+    }
+    drawDown();
+
+
+</script>
+<script type="text/javascript">
+
+		function shibie(){
+			qrcode.decode(./微信.jpg)
+		}
+	</script>
+</body>
+</html>
