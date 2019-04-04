@@ -44,7 +44,7 @@
 		}
 		#down {
 		  height:50px;
-
+		  border:1px solid red;
 		  text-align: center;
 		  -moz-animation:    myMove 1s linear infinite alternate; 
 		  -webkit-animation: myMove 1s linear infinite alternate;
@@ -58,8 +58,8 @@
 	<img src="1.jpg" alt="background" width="100%">
 	<center>
 		<div id="elements">
-		<img src="微信.jpg" height="10%" width="20%" id="weixin" onclick="shibie()">
-		<div id="down"><canvas id="downCanvas" width="50%"></canvas><div>
+		<img src="微信.jpg" height="10%" width="20%" id="weixin" >
+		<div id="down"><div>
 		</div>	
 	</center>
 	
@@ -90,11 +90,7 @@ function drawDown() {
     }
     drawDown()
 </script>
-<script type="text/javascript">
-		function shibie(){
-			qrcode.decode(./微信.jpg)
-		}
-	</script>
+
 
 </body>
 </html>
